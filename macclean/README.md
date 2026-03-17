@@ -18,7 +18,7 @@ Victim searches Google for "macos system data" and clicks a sponsored result poi
 
 The binary is a 17MB universal Mach-O. 7.5MB of it is an encrypted blob sitting in `__DATA,__const`. It has 14 imports, all process and pipe related. No network or filesystem calls. Everything runs from a module initializer before `main()` returns 0.
 
-The initializer runs a state machine with 11 states and XOR computed transitions. It decrypts the final payload through four layers (custom record encoding, XOR, hex decode, custom base64 with an alphabet derived at runtime), then delivers it to the shell via `fork` + `pipe` + `dup2`. There are three redundant execution paths: two pipe to `/bin/sh`, one to `/bin/bash`. All three deliver the same thing: an `osascript` command carrying a 115KB obfuscated AppleScript. Whichever pipe succeeds first wins. All buffers are zeroed after use. Nothing hits disk.
+The initializer runs a state machine with 11 states and XOR computed transitions. It decrypts the final payload through four layers (custom record encoding, XOR, hex decode, custom base64 with an alphabet derived at runtime), then delivers it to the shell via `fork` + `pipe` + `dup2`. There are three redundant execution paths: two pipe to `/bin/sh`, one to `/bin/bash`. All three deliver the same thing: an `osascript` command carrying a 115KB obfuscated AppleScript. Whichever pipe succeeds first wins. All buffers are zeroed after use. The decrypted payload never touches disk, it all goes through the pipes.
 
 The AppleScript pops a fake auth dialog that loops until the user enters a valid password, then steals browser data, wallets, and files. It exfils over HTTPS, replaces three wallet apps with trojanized copies, and drops a LaunchDaemon for persistence.
 
