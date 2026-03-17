@@ -1,3 +1,5 @@
+Update: I've managed to capture the trojanized app bundles. Will update once analysis is complete. 
+
 # macclean, a macOS infostealer
 
 Cryptocurrency focused macOS infostealer distributed through Google Ads malvertising. Five stages from a crafted lure page to a 115KB obfuscated AppleScript that exfiltrates browser data, cryptocurrency wallets, credentials, and personal files. Also replaces Ledger Live, Trezor Suite, and Exodus with trojanized copies and installs a LaunchDaemon for persistence.
