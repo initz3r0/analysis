@@ -400,7 +400,7 @@ kill "Exodus"         -> download hxxps://wusetail[.]com/zxc/appex.zip  -> /Appl
 
 For each: kill process, `sudo rm -r` the original, download zip, extract with `ditto -x -k`, `chmod -R +x`.
 
-All three download URLs were returning 404 at the time of analysis. The trojanized app payloads were not recovered.
+All three app zips and the kito payload were initially returning nothing but a 404, I've managed to capture them and submitted to VT while I analyze them.
 
 ### Persistence
 
