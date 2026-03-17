@@ -1,4 +1,4 @@
-Update: I've managed to capture the trojanized app bundles. Will update once analysis is complete. 
+**UPDATE**: Got the three trojanized app zips (app.zip, apptwo.zip, appex.zip) and the kito payload off wusetail before they were pulled. Submitted all four to VirusTotal: [app.zip](https://www.virustotal.com/gui/file-analysis/YzQyOTljOGEzNGIxMWY1ZjU3NjE1ODMzNmFiN2E1NDA6MTc3Mzc2NTEyOQ==), [apptwo.zip](https://www.virustotal.com/gui/file-analysis/OWIxZWFiZWE3NzkyM2RjOWZmZWRmNmYxNjdiNmJmMGU6MTc3Mzc2NTE0Ng==), [appex.zip](https://www.virustotal.com/gui/file-analysis/NTM2MDMwZjNjZTgyNDdkNGVlMDEyYThjMWFlMGE2NzE6MTc3Mzc2NTE2Ng==), [kito](https://www.virustotal.com/gui/file-analysis/Y2NjZjdhOTA4NTcyY2UwYzY3OTk2MjU5NjE1YzFiZDE6MTc3Mzc2NTEwNg==). Will update with findings once I finish tearing them apart.
 
 # macclean, a macOS infostealer
 
